@@ -1,0 +1,134 @@
+.service-slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+  position: relative;
+  background-color: white;
+}
+
+.slider-wrapper {
+  display: flex;
+  justify-content: center;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 1200px;
+  scrollbar-width: none;
+}
+
+.slider-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.service-card {
+  flex: 0 0 27%;
+  max-width: 27%;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  transition: transform 0.3s ease;
+  scroll-snap-align: center;
+}
+
+/* Individual Card Styling */
+.service-card.black {
+  background-color: #26313c;
+  margin-top: 1.5rem;
+}
+
+.service-card.blue {
+  background-color: #336699;
+  /* margin-bottom: 0.5rem; */
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.2);
+}
+
+.service-card h3 {
+  margin: 15px 0;
+  font-size: 1.5rem;
+}
+
+.service-card p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 90%;
+}
+
+/* Responsive Styles */
+/* @media (max-width: 1024px) {
+  .service-card {
+    flex: 0 0 20%;
+    max-width: 20%;
+    margin: 0 15px;
+  }
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+  .service-card p {
+    font-size: 1rem;
+  }
+} */
+
+@media (max-width: 768px) {
+  .slider-wrapper {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    width: 90%;
+    justify-content: start;
+  }
+
+  .service-card {
+    flex: 0 0 95%;
+    max-width: 95%;
+    height: auto;
+    padding: 25px;
+    scroll-snap-align: center;
+    margin: 0 auto;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    flex: 0 0 90%;
+    max-width: 90%;
+    padding: 30px;
+  }
+
+  .service-card h3 {
+    font-size: 1rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+  }
+  .slider-wrapper {
+    width: 80%;
+  }
+}

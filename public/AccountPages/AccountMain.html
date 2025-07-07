@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS -->
+    <link
+      href="https://lexbridgetrading.com/assets2/css/fonts/fontawesome/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://lexbridgetrading.com/assets2/css/fonts/theme.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://lexbridgetrading.com/assets2/css/main.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://lexbridgetrading.com/assets2/css/styles.css"
+      rel="stylesheet"
+    />
+
+    <!-- JQVMAP -->
+    <link
+      href="https://lexbridgetrading.com/assets2/plugins/jqvmap/jqvmap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://lexbridgetrading.com/assets2/fonts/inter/inter.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+  </head>
+  <body class="body">
+   
+
+    <!-- main -->
+ <div class="main-container">
+
+  <!-- header -->
+  <header class="main-header">
+    <!-- nav -->
+    <nav class="main-navbar navbar navbar-expand-lg navbar-dark navbar-affix">
+      <div class="ml-auto px-4 pl-lg-9">
+        <ul class="nav sec-nav navbar-nav flex-row">
+          <li class="user-item nav-item dropdown">
+            <a class="user-link nav-link d-inline-flex align-items-center h-100 small-1 pl-1 pl-sm-3 pr-0" href="#" id="dropdownAdmin_02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img class="user-avatar rounded-circle mr-sm-3" src="https://lexbridgetrading.com/user.jpg" alt="Avatar">
+              <div class="d-none d-sm-block lh-1">
+                <span class="small-5 fw-300">Welcome,</span>
+                <div class="lh-5 text-primary">frankrichie</div>
+              </div>
+              <span class="icon-chevron-down small-8 ml-3"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow-1 py-3 position-absolute mt-2" aria-labelledby="dropdownAdmin">
+              <div class="px-5 text-center">
+                <div class="img-md position-relative br-n bp-c bs-c ar-1_1 mx-auto rounded-circle mb-3" style="background-image: url(https://lexbridgetrading.com/user.jpg)">
+                  <span class="position-absolute b-0 r--1 text-light small-6 d-block bg-primary p-2 rounded-circle lh-1"><input type="file" class="custom-file-input position-absolute l-0 t-0 b-0 h-auto" id="customFile"><i class="fas fa-pen"></i></span>
+                </div>
+                <div class="lh-5 small-2 fw-500">frankrichie</div>
+                <hr class="my-4">
+              </div>
+              <a class="dropdown-item" href="?a=edit_account"><span class="icon-user mr-2"></span>My Profile</a>
+              <a class="dropdown-item" href="?a=security"><span class="icon-cog mr-2"></span>Settings</a>
+              <a class="dropdown-item" href="?a=logout"><span class="icon-power-on mr-2"></span>Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /.nav -->
+  </header>
+  <!-- /.header -->
+
+<main class="main-content overflow-hidden">
+    <!-- inner-body -->
+    <div id="dashboard" class="inner-body overflow-hidden">
+      <!-- content-header -->
+      <div class="container-fluid pt-7 pb-3">
+        <div class="row flex-wrap align-items-center py-3">
+          <div class="col mb-4 mb-md-0">
+            <div class="text-light">
+              <h3 class="fw-100 mb-1">Welcome back, frankrichie!</h3>
+              <span class="text-info">Dashboard</span>
+            </div>
+          </div>
+          <div class="col-12 col-md-auto">
+
+        </div>
+      </div>
+      <!-- /.content-header -->
+
+      <!-- container -->
+      <div class="container-fluid">
+        <!-- panel-cards-->
+
+
+
+
+
+
+
+          <div>
+          <div class="row mb-4">
+            <div class="col d-flex align-items-center py-1">
+              <ul class="panel-tab-group flex-nowrap nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="day-tab" data-toggle="tab" href="#day" role="tab" aria-controls="day" aria-selected="true">Up to Today</a>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+          <div class="tab-content" id="defaultTabContent">
+            <div class="tab-pane fade show active" id="day" role="tabpanel" aria-labelledby="day-tab">
+              <!-- panel-card -->
+              <div class="card-row row mb-7">
+                <div class="card-item col-md-6 col-lp-3 mb-6 mb-lp-3">
+                  <div class="main-card card text-light">
+                    <div class="mb-2">
+                      <span class="text-uppercase fw-600 text-glow-white-sm">Total Earnings</span>
+                    </div>
+                    <div class="d-flex align-items-center w-100">
+                      <div class="flex-1">
+                        <h3 class="fw-300 mb-0">$<b>0.00</b></h3>
+                        <span class="small"><span class="text-success fw-600"><i class="fas fa-arrow-up ml-1"></i></span></span>
+                      </div>
+                      <div class="w-50" style="height: 50px;">
+                        <canvas id="chart-sm-01" height="49"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-item col-md-6 col-lp-3 mb-6 mb-lp-3">
+                  <div class="main-card card text-light">
+                    <div class="mb-2">
+                      <span class="text-uppercase fw-600 text-glow-white-sm">Pending Withdrawals</span>
+                    </div>
+                    <div class="d-flex align-items-center w-100">
+                      <div class="flex-1">
+                        <h3 class="fw-300 mb-0">$<b>0.00</b></h3>
+                        <span class="small"><span class="text-success fw-600"><i class="fas fa-arrow-up ml-1"></i></span></span>
+                      </div>
+                      <div class="w-50" style="height: 50px;">
+                        <canvas id="chart-sm-02" height="49"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-item col-md-6 col-lp-3 mb-6 mb-lg-3">
+                  <div class="main-card card text-light">
+                    <div class="mb-2">
+                      <span class="text-uppercase fw-600 text-glow-white-sm">Balance</span>
+                    </div>
+                    <div class="d-flex align-items-center w-100">
+                      <div class="flex-1">
+                        <h3 class="fw-300 mb-0">$<b>0</b> <span><small>
+
+                     </h3>                                                                                                          </small></span>
+                        <span class="small"><span class="text-success fw-600"><i class="fas fa-arrow-up ml-1"></i></span></span>
+                      </div>
+                      <div class="w-50" style="height: 50px;">
+                        <canvas id="chart-sm-03" height="49"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-item col-md-6 col-lp-3 mb-3">
+                  <div class="main-card card text-light">
+                    <div class="mb-2">
+                      <span class="text-uppercase fw-600 text-glow-white-sm">Active Deposit</span>
+                    </div>
+                    <div class="d-flex align-items-center w-100">
+                      <div class="flex-1">
+                        <h3 class="fw-300 mb-0">$<b>0.00</b></h3>
+                        <span class="small"><span class="text-danger fw-600"><i class="fas fa-arrow-down ml-1"></i></span></span>
+                      </div>
+                      <div class="w-50" style="height: 50px;">
+                        <canvas id="chart-sm-04" height="49"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.panel-card -->
+            </div>
+          </div>
+        </div>
+        <!-- /.panel-cards -->
+      </div>
+      <!-- /.container -->
+
+
+
+      <div class="container-fluid mb-4">
+                    <div class="row no-gutters panel-top-line panel-fill rounded">
+                      <div class="col-xl-9 panel-header-oly px-4">
+                        <div>
+                          <header>
+                            <div class="nav d-flex align-items-center py-5">
+                              <div class="d-flex align-items-center w-100 pl-lg-0">
+                                <div class="d-flex align-items-center w-100">
+                                  <div>
+                                    <h4 class="fw-300 mb-0">Details</h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </header>
+                        </div>
+                      </div>
+                      <div class="col-xl-3 order-3 order-xl-2 panel-top-line border-xl-top-0 panel-xl-left-line">
+                        <div class="d-flex align-items-center justify-content-center w-100 h-100 bg-light_A-5 py-6 py-xl-0">
+                          <span class="fw-600 ls-1 text-uppercase lead-1">Aditional Info</span>
+                        </div>
+                      </div>
+                      <div class="col-xl-9 order-xl-3 pl-lg-0 panel-top-line">
+                        <div class="pr-4 pr-lg-0 pl-4 pt-6">
+                          <div class="shop-olist row">
+                            <!-- item -->
+                            <div class="shop-oitem col-md-12">
+                              <div class="product-item">
+                                <div class="row align-items-center no-gutters">
+                                  <div class="col-lg-7 col-xl-7 col-lp-8 flex-1 mb-5 mb-lg-0">
+                                    <div class="row no-gutters">
+                                      <div class="d-flex w-100 w-lg-auto">
+                                        <div class="ml-auto d-lg-none">
+                                          <div class="dropdown">
+                                            <a class="nav-link d-inline-flex align-items-center h-100 text-capitalize ls-normal small-1 pr-0" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              <span><i class="fas fa-ellipsis-v"></i></span>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right shadow-1 py-3 mt-1">
+                                              <a class="dropdown-item" href="#">To favorites</a>
+                                              <a class="dropdown-item" href="#">Delete</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-12 col-lg-auto flex-lg-1 d-flex justify-content-center flex-column pl-lg-4">
+
+
+
+                                        <table class="table table-borderless table-hover">
+                                        <tr>
+                                         <td>User:</td>
+                                         <td>frankrichie</td>
+                                        </tr><tr>
+                                         <td>Registration Date:</td>
+                                         <td>Feb-19-2025</td>
+                                        </tr><tr>
+                                         <td>Last Access:</td>
+                                         <td>Feb-20-2025 07:58:39 AM&nbsp;</td>
+                                        </tr><tr>
+                                         <td>Referral Link:</td>
+                                         <td>https://lexbridgetrading.com/?ref=frankrichie</td>
+                                        </tr><tr>
+                                         <td>Withdrew Total:</td>
+                                         <td>$<b>0.00</b></td>
+                                        </tr>
+                                                                                                                                                                                                                        <tr>
+                                         <td>&nbsp;</td>
+                                        </tr></table>
+
+
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- /.item -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-3 order-4 panel-xl-left-line panel-top-line char-sFill">
+                        <div class="d-flex flex-column px-4 py-3">
+                          <!--<div>
+                            <span class="small-2">Statistics</span>
+                          </div>
+                          <div>
+                            <hr class="my-3 panel-hr">
+                          </div>
+                          <div class="my-1">
+                            <div class="d-flex small-2 fw-600">
+                              <div>Days Online</div>
+                              <div class="ml-auto">1150</div>
+                            </div>
+                          </div>
+                          <div class="my-1">
+                            <div class="d-flex text-info small-2 fw-600">
+                              <div>Total Accounts</div>
+                              <div class="ml-auto">556</div>
+                            </div>
+                          </div>
+                          <div class="my-1">
+                            <div class="d-flex text-warning small-2 fw-600">
+                              <div>Active Accounts</div>
+                              <div class="ml-auto">23</div>
+                            </div>
+                          </div>
+                          <div class="my-1">
+                            <div class="d-flex small-2 fw-600">
+                              <div>Total Deposits</div>
+                              <div class="ml-auto text-danger">$424194505.19</div>
+                            </div>
+                          </div>
+                          <div class="my-1">
+                            <div class="d-flex small-2 fw-600">
+                              <div>Total Withdrawals</div>
+                              <div class="ml-auto text-warning">$631121.88</div>
+                            </div>
+                          </div>
+                          <div>
+                            <hr class="my-3 panel-hr">
+                          </div>-->
+
+
+                          <div>
+                            <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script> <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#999999" lcw-marquee-1="coins" lcw-marquee-2="movers" lcw-marquee-items="10" ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+
+
+<br><br>
+
+</div>
+
+</div>
+<!-- footer -->
+    <footer class="footer panel">
+      <div class="footer-body text-primary">
+        <div class="row no-gutters align-items-center">
+          <div class="col-12 col-sm-auto">
+            <div class="text-center text-sm-left fw-400 mb-2 mb-sm-0">
+             Copyright © All Rights Reserved.
+            </div>
+          </div>
+          <div class="col-12 col-sm">
+            <div class="nav nav-bold-style justify-content-center justify-content-sm-end text-uppercase mx--4">
+              <a class="nav-link" href="?a=about">About Us</a>
+              <a class="nav-link" href="?a=rules">Terms of use</a>
+              <a class="nav-link" href="?a=support">Support</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /.footer -->
+  </main>
+  <!-- /.main content -->
+</div>
+<!-- /.main -->
+
+    <!-- jQuery -->
+    <script src="https://lexbridgetrading.com/assets2/js/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://lexbridgetrading.com/assets2/js/bootstrap.min.js"></script>
+
+    <!-- Chart.js -->
+    <script
+      src="https://lexbridgetrading.com/assets2/plugins/chart/Chart.min.js"
+      id="_chartJS_min"
+    ></script>
+    <script src="https://lexbridgetrading.com/assets2/plugins/chart/Chart.bundle.min.js"></script>
+    <script src="https://lexbridgetrading.com/assets2/plugins/chart/chartjs-plugin-annotation.js"></script>
+    <script src="https://lexbridgetrading.com/assets2/plugins/chart/chartjs-plugin-labels.js"></script>
+
+    <!-- apexcharts -->
+    <script src="https://lexbridgetrading.com/assets2/plugins/apexcharts/apexcharts.min.js"></script>
+
+    <!-- RangeSlider -->
+    <script
+      src="https://lexbridgetrading.com/assets2/plugins/rangeslider/rangeslider.min.js"
+      id="_rangeJS_min"
+    ></script>
+
+    <!-- Moment -->
+    <script src="https://lexbridgetrading.com/assets2/plugins/lib/moment/moment.min.js"></script>
+
+    <!-- User JS -->
+    <script src="https://lexbridgetrading.com/assets2/js/scripts.js"></script>
+
+    <!-- Main JS -->
+    <script
+      src="https://lexbridgetrading.com/assets2/js/main.js"
+      id="_mainJS"
+      data-plugins="load"
+    ></script>
+
+    <!-- Modules -->
+    <script src="https://lexbridgetrading.com/assets2/js/modules.js"></script>
+  </body>
+</html>

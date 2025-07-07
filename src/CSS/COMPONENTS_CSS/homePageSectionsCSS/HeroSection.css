@@ -1,0 +1,129 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Darkened Background Overlay */
+.bg-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+/* Background Image */
+.bg-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("/earth-globe.jpg") center/cover no-repeat;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+/* Background Video */
+.bg-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* TradingView Widgets */
+.tradingview-widgets {
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  z-index: 3;
+  opacity: 0.6;
+}
+
+.tradingview-widget {
+  width: 1300px;
+  height: auto;
+}
+.tradingview-widget-container.widget-1 {
+  width: 100vh;
+  margin-top: 8rem;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 200;
+  line-height: 4rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.btn-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.btn {
+  padding: 8px 30px;
+  font-size: 15px;
+  border: none;
+  background-color: #336699;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+
+  cursor: pointer;
+  border-radius: 2rem;
+  margin-top: 2rem;
+}
+.btn:hover {
+  border: 1px solid #336699;
+  background-color: transparent;
+  color: #336699;
+}
+
+/* .signup {
+  background-color: gold;
+  color: black;
+} */
+
+/* .login {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .btn-group {
+    flex-direction: row;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .tradingview-widgets {
+    opacity: 0.4;
+  }
+}

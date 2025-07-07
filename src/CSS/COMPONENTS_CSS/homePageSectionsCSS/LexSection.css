@@ -1,0 +1,90 @@
+.lex-container {
+  background-color: #262841; /* Dark purple */
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: -2rem;
+  overflow: hidden;
+}
+
+.lex-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.lex-container.visible .lex-content {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.lex-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  text-align: start;
+}
+
+.lex-img {
+  width: 60%;
+}
+.lex-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 45px;
+  line-height: 54px;
+  font-weight: 200;
+  color: #ffff;
+  text-align: center;
+}
+
+.lex-heading {
+  font-size: 16.875px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.lex-text {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Large screens */
+@media (min-width: 768px) {
+  .hs {
+    text-align: start;
+  }
+
+  .lex-content {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .lex-card {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lex-card {
+    width: 100%;
+  }
+  .hs {
+    text-align: center;
+    margin-top: 1.3rem;
+  }
+  .lex-heading {
+    margin: 0.5rem;
+  }
+  .lex-title {
+    font-size: 30px;
+    line-height: 34px;
+  }
+  .lex-heading {
+    font-size: 12px;
+  }
+}

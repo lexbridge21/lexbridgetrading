@@ -1,0 +1,193 @@
+/* Main Slider Container */
+
+.main-slider {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+}
+
+/* Individual Slides */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Active Slide */
+.slide.active {
+  opacity: 1;
+}
+
+/* Darkened Background Overlay */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Slide Content */
+.slide-content {
+  color: white;
+  text-align: center;
+  position: relative;
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+/* Enter Animation (Slide Up) */
+.enter {
+  opacity: 1;
+  transform: translateY(50px);
+  animation: slideUp 0.8s ease-in-out forwards;
+}
+
+/* Exit Animation (Slide Down) */
+.exit {
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slideDown 0.8s ease-in-out forwards;
+}
+
+/* Slide-in Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-out Animation */
+@keyframes slideDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+
+/* ======= Unique Styling for Each Slide's Text Breaks ======= */
+
+/* Slider 1 */
+.slider1 .slider2 .slider3 {
+  color: white;
+  margin-top: 2rem;
+}
+.slider1 .text-1 {
+  font-weight: 100;
+  font-size: 42px;
+  font-family: "Montserrat", sans-serif;
+}
+.slider1 .text-2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 52px;
+  margin-top: 10px;
+}
+.slider1 .text-3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 52px;
+  margin-top: 10px;
+}
+.slider1 .text-4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 52px;
+  margin-top: 10px;
+}
+
+/* Slider 2 */
+.slider2 .text-1 {
+  font-weight: 100;
+  font-size: 42px;
+  font-family: "Montserrat", sans-serif;
+}
+.slider2 .text-2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 52px;
+  margin-top: 10px;
+}
+.slider2 .text-3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 52px;
+  margin-top: 10px;
+}
+.slider2 .text-4 {
+  font-weight: 100;
+  font-size: 42px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Slider 3 */
+.slider3 .text-1 {
+  font-weight: 100;
+  font-size: 42px;
+  font-family: "Montserrat", sans-serif;
+}
+.slider3 .text-2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.slider3 .text-3 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.slider3 .text-4 {
+  font-weight: 100;
+  font-size: 42px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Slide Indicators (Only on large screens) */
+.slide-indicators {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.indicator {
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 21px;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+  font-family: "Montserrat", sans-serif;
+}
+
+.indicator.active {
+  border-bottom: 2px solid white;
+  width: 2rem;
+}
+
+/* Hide Indicators on Small Screens */
+@media (max-width: 768px) {
+  .slide-indicators {
+    display: none;
+  }
+}

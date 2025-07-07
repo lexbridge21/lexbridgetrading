@@ -1,0 +1,81 @@
+.first-footer {
+  background: url("/fist-f.jpg") repeat center center/contain;
+  padding: 50px 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  height: 1830.69px;
+}
+
+.first-footer-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.first-footer-logo1 {
+  height: 46.4375px;
+  width: 90px;
+}
+
+.first-footer-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  height: 990px;
+  width: 255px;
+}
+
+.first-footer-heading {
+  font-family: "Open Sans", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  /* height: 140px; */
+  width: 255px;
+  padding: 0 0 20px 0;
+  text-align: center;
+}
+
+@media (max-width: 668px) {
+  .first-footer {
+    height: auto;
+  }
+  .first-footer-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .first-footer-logo1 {
+    margin-left: -20rem;
+  }
+
+  .first-footer-text {
+    text-align: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .first-footer-heading {
+    text-align: center;
+    width: 100%;
+  }
+}
+@media (max-width: 466px) {
+  .first-footer {
+    height: auto;
+  }
+  .first-footer-logo1 {
+    margin-left: -10rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 366px) {
+  .first-first-footer {
+    height: auto;
+  }
+}
