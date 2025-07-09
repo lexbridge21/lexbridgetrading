@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import Notiflix from "notiflix";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -44,7 +46,8 @@ const LoginPage = () => {
         localStorage.setItem("token", data.token);
 
         // Redirect to dashboard
-        window.location.href = "/dashboard";
+        // window.location.href = "/dashboard";
+        navigate("/dashboard");
       } else {
         Notiflix.Notify.failure(data.message || "Login failed!");
       }
