@@ -148,6 +148,7 @@ const LoginPage = () => {
                           type="text"
                           name="username"
                           value={formData.username}
+                          style={{ fontSize: "16px" }} // Add this
                           onChange={handleChange}
                           placeholder="Username:"
                           required
@@ -161,6 +162,7 @@ const LoginPage = () => {
                           type={showPassword ? "text" : "password"}
                           name="password"
                           value={formData.password}
+                          style={{ fontSize: "16px" }} // Add this
                           onChange={handleChange}
                           placeholder="Password:"
                           required

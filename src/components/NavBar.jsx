@@ -21,12 +21,14 @@ const NavBar = () => {
       <div className="nav-container">
         {/* Logo */}
         <div className="logo">
-          <div className="logo-img">
-            <img
-              src={scrolling ? "/lex-logo.png" : "/lex-logo1.png"}
-              alt="Logo"
-            />
-          </div>
+          <Link to="/">
+            <div className="logo-img">
+              <img
+                src={scrolling ? "/lex-logo.png" : "/lex-logo1.png"}
+                alt="Logo"
+              />
+            </div>
+          </Link>
           <div id="google_translate_element"></div>
         </div>
 

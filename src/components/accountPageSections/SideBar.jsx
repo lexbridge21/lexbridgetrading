@@ -46,9 +46,9 @@ const Sidebar = () => {
           <li>
             <Link to="/deposit">Make Deposit</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/history">History</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/withdrawal">Withdraw</Link>
           </li>

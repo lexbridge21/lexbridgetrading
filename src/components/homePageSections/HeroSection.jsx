@@ -19,14 +19,20 @@ const HeroSection = () => {
       {/* Background Overlay for Darkening Effect */}
       <div className="bg-overlay"></div>
 
-      {/* Background Image */}
-      {!showVideo && <div className="bg-img"></div>}
+      {/* Background Image Wrapper */}
+      {!showVideo && (
+        <div className="image-wrapper">
+          <div className="bg-img"></div>
+        </div>
+      )}
 
-      {/* Background Video */}
+      {/* Background Video Wrapper */}
       {showVideo && (
-        <video autoPlay loop muted className="bg-video">
-          <source src="Aerial-View.mp4" type="video/mp4" />
-        </video>
+        <div className="video-wrapper">
+          <video autoPlay loop muted className="bg-video">
+            <source src="Aerial-View.mp4" type="video/mp4" />
+          </video>
+        </div>
       )}
 
       {/* TradingView Widgets */}
@@ -54,7 +60,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Main Content */}
       <div className="hero-content">
         <h1>
           Building <br />

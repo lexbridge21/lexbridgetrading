@@ -7,35 +7,46 @@
   align-items: center;
   text-align: center;
   color: white;
-  overflow: hidden;
+  overflow: hidden; /* Ensures children like video stay within */
 }
 
 /* Darkened Background Overlay */
 .bg-overlay {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  z-index: 1;
+  z-index: 2; /* Above video/image, below content/widgets */
+}
+
+/* Video Wrapper - stabilizes layout and ensures containment */
+.video-wrapper,
+.image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
 }
 
 /* Background Image */
 .bg-img {
-  position: absolute;
   width: 100%;
   height: 100%;
   background: url("/earth-globe.jpg") center/cover no-repeat;
   transition: opacity 1s ease-in-out;
-  z-index: 0;
 }
 
 /* Background Video */
 .bg-video {
-  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
+  pointer-events: none; /* Prevent accidental interaction */
 }
 
 /* TradingView Widgets */
@@ -47,7 +58,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  z-index: 3;
+  z-index: 4; /* On top of everything except modal if any */
   opacity: 0.6;
 }
 
@@ -55,6 +66,7 @@
   width: 1300px;
   height: auto;
 }
+
 .tradingview-widget-container.widget-1 {
   width: 100vh;
   margin-top: 8rem;
@@ -63,7 +75,7 @@
 /* Content */
 .hero-content {
   position: relative;
-  z-index: 3;
+  z-index: 4;
 }
 
 .hero-content h1 {
@@ -87,27 +99,16 @@
   background-color: #336699;
   color: white;
   font-family: "Montserrat", sans-serif;
-
   cursor: pointer;
   border-radius: 2rem;
   margin-top: 2rem;
 }
+
 .btn:hover {
   border: 1px solid #336699;
   background-color: transparent;
   color: #336699;
 }
-
-/* .signup {
-  background-color: gold;
-  color: black;
-} */
-
-/* .login {
-  background-color: black;
-  color: white;
-  border: 2px solid white;
-} */
 
 /* Responsive Design */
 @media (max-width: 768px) {

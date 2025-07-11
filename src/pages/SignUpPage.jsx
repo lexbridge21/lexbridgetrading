@@ -187,6 +187,7 @@ const SignUpPage = () => {
                         <div className="form-group bottom35">
                           <input
                             className="form-control"
+                            style={{ fontSize: "16px" }} // Add this
                             type={type}
                             name={name}
                             value={formData[name]}
