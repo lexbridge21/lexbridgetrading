@@ -16,12 +16,17 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Function to close menu on link click (for mobile)
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className={`navbar ${scrolling ? "scrolled" : ""}`}>
       <div className="nav-container">
         {/* Logo */}
         <div className="logo">
-          <Link to="/">
+          <Link to="/" onClick={handleLinkClick}>
             <div className="logo-img">
               <img
                 src={scrolling ? "/lex-logo.png" : "/lex-logo1.png"}
@@ -32,7 +37,7 @@ const NavBar = () => {
           <div id="google_translate_element"></div>
         </div>
 
-        {/* Static Links (Only Visible on Large Screens) */}
+        {/* Static Links (Visible on large screens) */}
         <ul className="nav-static-links">
           <li>
             <Link to="/">Home</Link>
@@ -54,36 +59,47 @@ const NavBar = () => {
           </li>
         </ul>
 
-        {/* Hamburger Menu Icon (Always Visible on Small Screens) */}
+        {/* Hamburger Menu */}
         <div className="menu-icon" onClick={() => setMenuOpen(true)}>
           <BiMenuAltRight />
         </div>
 
-        {/* Side Drawer (Slides in from Right) */}
+        {/* Side Drawer */}
         <div className={`side-drawer ${menuOpen ? "open" : ""}`}>
-          {/* Close Icon */}
           <div className="close-icon" onClick={() => setMenuOpen(false)}>
             <RxCross2 />
           </div>
 
           <ul className="nav-links">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={handleLinkClick}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about" onClick={handleLinkClick}>
+                About
+              </Link>
             </li>
             <li>
-              <Link to="/login">Login</Link>
+              <Link to="/login" onClick={handleLinkClick}>
+                Login
+              </Link>
             </li>
             <li>
-              <Link to="/signup">Signup</Link>
+              <Link to="/signup" onClick={handleLinkClick}>
+                Signup
+              </Link>
             </li>
             <li>
-              <Link to="/faq">Faq</Link>
+              <Link to="/faq" onClick={handleLinkClick}>
+                Faq
+              </Link>
             </li>
             <li>
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact" onClick={handleLinkClick}>
+                Contact Us
+              </Link>
             </li>
           </ul>
         </div>

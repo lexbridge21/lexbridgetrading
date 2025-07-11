@@ -40,6 +40,7 @@ const StayConnected = () => {
                         placeholder="Name"
                         required
                         name="userName"
+                        style={{ fontSize: "16px" }} // Add this
                         value={formData.userName}
                         onChange={handleChange}
                       />
@@ -53,6 +54,7 @@ const StayConnected = () => {
                         placeholder="Company"
                         name="companyName"
                         value={formData.companyName}
+                        style={{ fontSize: "16px" }} // Add this
                         onChange={handleChange}
                       />
                     </div>
@@ -67,6 +69,7 @@ const StayConnected = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
+                        style={{ fontSize: "16px" }} // Add this
                       />
                     </div>
                   </div>

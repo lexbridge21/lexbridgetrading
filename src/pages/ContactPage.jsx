@@ -117,6 +117,7 @@ const ContactPage = () => {
                               placeholder="Name:"
                               name="name"
                               value={formData.name}
+                              style={{ fontSize: "16px" }} // Add this
                               onChange={handleChange}
                             />
                           </div>
@@ -129,6 +130,7 @@ const ContactPage = () => {
                               placeholder="Email:"
                               name="email"
                               value={formData.email}
+                              style={{ fontSize: "16px" }} // Add this
                               onChange={handleChange}
                             />
                           </div>
@@ -140,6 +142,7 @@ const ContactPage = () => {
                               placeholder="Message:"
                               name="message"
                               value={formData.message}
+                              style={{ fontSize: "16px" }} // Add this
                               onChange={handleChange}
                             ></textarea>
                           </div>
