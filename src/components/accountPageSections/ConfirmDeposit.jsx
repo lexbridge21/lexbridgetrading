@@ -36,7 +36,7 @@ const ConfirmDeposit = () => {
     if (depositData.currency === "BTC") {
       return {
         image: "btcw.jpg",
-        address: "bc1q9kh3dcpaa5hvxtmp8hcyrgtuzpp0krjqhsghn2",
+        address: "bc1q34kjguzkjhwhr9gxee0a98ty6vzrl6r3afr27a",
       };
     } else if (depositData.currency === "ETH") {
       return {
