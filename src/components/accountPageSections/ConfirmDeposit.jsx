@@ -35,13 +35,13 @@ const ConfirmDeposit = () => {
 
     if (depositData.currency === "BTC") {
       return {
-        image: "btcw.jpg",
-        address: "bc1q34kjguzkjhwhr9gxee0a98ty6vzrl6r3afr27a",
+        image: "ola-btc.jpg",
+        address: "bc1qxr9gp0sllj8sguaezxx8vtd2e8xtqu2ne0dy24",
       };
     } else if (depositData.currency === "ETH") {
       return {
-        image: "ethw.jpg",
-        address: "0x61a08b0f880A6206Bf2d5601e293AFCAB1825525",
+        image: "ola-eth.jpg",
+        address: "0xdd606A262B175E0EA75bA6EF5BD2f424bfc54b31",
       };
     } else {
       return { image: "", address: "Invalid Currency Selected" };
