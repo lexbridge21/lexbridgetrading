@@ -18,6 +18,57 @@ const AccountDeposit = () => {
     return Number(num).toLocaleString();
   };
 
+  const plans = [
+    {
+      id: 1,
+      name: "SILVER PLAN",
+      min: "100.00",
+      max: "999.00",
+      profit: "2.30%",
+      days: 15,
+    },
+    {
+      id: 2,
+      name: "GOLD PLAN",
+      min: "1000.00",
+      max: "9999.00",
+      profit: "2.60%",
+      days: 30,
+    },
+    {
+      id: 3,
+      name: "DIAMOND PLAN",
+      min: "10000.00",
+      max: "29999.00",
+      profit: "2.80%",
+      days: 30,
+    },
+    {
+      id: 4,
+      name: "LEVEL 4 PLAN",
+      min: "30000.00",
+      max: "50000.00",
+      profit: "3.00%",
+      days: 30,
+    },
+    {
+      id: 5,
+      name: "FIAT CURRENCY",
+      min: "500.00",
+      max: "9999.00",
+      profit: "5.60%",
+      days: 30,
+    },
+    {
+      id: 6,
+      name: "FOREX MARKET",
+      min: "10000.00",
+      max: "49999.00",
+      profit: "5.80%",
+      days: 45,
+    },
+  ];
+
   useEffect(() => {
     const fetchUserData = async () => {
       const token = localStorage.getItem("token");
@@ -255,7 +306,7 @@ const AccountDeposit = () => {
                     </div>
                   </div>
 
-                  <div className="col-xl-9 order-xl-3 pl-lg-0 panel-top-line">
+                  {/* <div className="col-xl-9 order-xl-3 pl-lg-0 panel-top-line">
                     <div className="pr-4 pr-lg-0 pl-4 pt-6">
                       <div className="shop-olist row">
                         <div className="shop-oitem col-md-12">
@@ -327,7 +378,7 @@ const AccountDeposit = () => {
                                               }
                                             />
                                             <b>
-                                              {plan.profit} daily for 7 days
+                                              {plan.profit} daily for 30 days
                                             </b>
                                           </td>
                                         </tr>
@@ -348,6 +399,81 @@ const AccountDeposit = () => {
                                               {plan.min}
                                             </span>{" "}
                                             -{" "}
+                                            <span className="max_deposit">
+                                              {plan.max}
+                                            </span>
+                                          </td>
+                                          <td className="item" align="right">
+                                            {plan.profit}
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  ))}
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> */}
+
+                  <div className="col-xl-9 order-xl-3 pl-lg-0 panel-top-line">
+                    <div className="pr-4 pr-lg-0 pl-4 pt-6">
+                      <div className="shop-olist row">
+                        <div className="shop-oitem col-md-12">
+                          <div className="product-item">
+                            <div className="row align-items-center no-gutters">
+                              <div className="col">
+                                <form name="spendform">
+                                  <input type="hidden" name="form_id" />
+                                  <input
+                                    type="hidden"
+                                    name="a"
+                                    value="deposit"
+                                  />
+
+                                  <p>Select a plan:</p>
+
+                                  {plans.map((plan) => (
+                                    <table key={plan.id} className="table">
+                                      <tbody>
+                                        <tr>
+                                          <td colSpan="3">
+                                            <input
+                                              type="radio"
+                                              name="h_id"
+                                              value={plan.id}
+                                              onChange={() =>
+                                                setSelectedPlan(plan)
+                                              }
+                                            />
+                                            <b>
+                                              {plan.profit} daily for{" "}
+                                              {plan.days} days
+                                            </b>
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td className="inheader">Plan</td>
+                                          <td className="inheader" width="200">
+                                            Spent Amount (
+                                            <span className="fiat">$</span>)
+                                          </td>
+                                          <td className="inheader" width="100">
+                                            <nobr>Daily Profit (%)</nobr>
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td className="item">{plan.name}</td>
+                                          <td className="item" align="right">
+                                            <span className="min_deposit">
+                                              {plan.min}
+                                            </span>
+                                            {" - "}
                                             <span className="max_deposit">
                                               {plan.max}
                                             </span>
