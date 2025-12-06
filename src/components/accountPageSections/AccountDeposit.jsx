@@ -266,7 +266,7 @@ const AccountDeposit = () => {
                         <table cellSpacing={0} cellPadding={2} border={0}>
                           <tbody>
                             <tr>
-                              <td>Amount to Spend ($):</td>
+                              <td>Amount to Invest ($):</td>
                               <td align="right">
                                 <input
                                   type="text"
@@ -294,7 +294,7 @@ const AccountDeposit = () => {
                               <td colSpan={2}>
                                 <input
                                   type="submit"
-                                  value="Spend"
+                                  value="Invest"
                                   className="my-3 mx-1 btn btn-primary"
                                   onClick={handleSubmit}
                                 />
@@ -459,7 +459,7 @@ const AccountDeposit = () => {
                                         <tr>
                                           <td className="inheader">Plan</td>
                                           <td className="inheader" width="200">
-                                            Spent Amount (
+                                            Invest Amount (
                                             <span className="fiat">$</span>)
                                           </td>
                                           <td className="inheader" width="100">
